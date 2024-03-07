@@ -1,0 +1,21 @@
+POSSIBLE QUERIES 
+
+Top 10 artists with most ranking points
+1. SELECT ARTIST, TOTAL_POINTS FROM `spotifyinfo` GROUP BY ARTIST ORDER BY TOTAL_POINTS DESC LIMIT 10
+
+Territories (continent columnm) with most streams
+2. SELECT CONTINENT AS TERRITORY, SUM(TOTAL_POINTS) AS POINTS FROM `spotifyinfo` GROUP BY TERRITORY ORDER BY POINTS DESC
+
+Top 10 de canciones más populares:
+3. SELECT TITLE, ARTIST, TOTAL_POINTS FROM `spotifyinfo` ORDER BY TOTAL_POINTS DESC LIMIT 10;
+
+Top X canciones con más energia (energy column)
+4. SELECT TITLE, ARTIST, ENERGY FROM `spotifyinfo` ORDER BY ENERGY DESC LIMIT 10;
+
+Numero de canciones por continente
+5. SELECT CONTINENT, COUNT(*) AS NumSongs FROM `spotifyinfo` GROUP BY CONTINENT;
+
+Numero de canciones por nacionalidad
+6. SELECT NATIONALITY, COUNT(*) AS NUMSONGS FROM `spotifyinfo` GROUP BY NATIONALITY ORDER BY NUMSONGS DESC LIMIT 20;
+
+

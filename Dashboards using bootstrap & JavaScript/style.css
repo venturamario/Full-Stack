@@ -1,0 +1,72 @@
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h2 {
+    font-size: 26px;
+    color: #2b2b2b;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+    font-size: 20px;
+    color: #000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+
+.body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.margin1 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.margin2 {
+    margin-top: 40px;
+}
+
+/* --> ROW 1 CHART 1 */
+.chart1style {
+    margin-top: 10px;
+    margin-left: 50px;
+}
+
+/* ROW 1 CHART 2 */
+.chart2style {
+    margin-top: 10px;
+    margin-right: 50px;
+}
+
+/* ROW 2 CHART 1 */
+.chart3style {
+    margin-top: 10px;
+    margin-left: 50px;
+}
