@@ -1,0 +1,98 @@
+/* Paleta de colores lila */
+:root {
+    --lila-claro: #E8D5F9;
+    --lila: #D1B3F0;
+    --lila-oscuro: #A277ED;
+    --texto-lila: #5E2E88;
+    --fondo: #F9F3FD;
+}
+
+.centered-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* Esto toma al menos el alto completo de la ventana gráfica */
+}
+
+h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight:bold;
+    color: var(--texto-lila)
+}
+
+h2 {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--lila-oscuro)
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--fondo);
+    color: var(--texto-lila);
+}
+
+#navbarSupportedContent {
+    display: flex;
+    justify-content: flex-end; /* Esto alinea los elementos a la derecha */
+}
+
+#uib, #playerConcept, #dropdown {
+    margin-left: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: var(--lila-claro);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.video-player {
+    width: 100%;
+    background-color: var(--lila);
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.video-details {
+    padding: 15px;
+    background-color: var(--lila-oscuro);
+    color: white;
+    border-radius: 8px;
+}
+
+.sidebar {
+    float: right;
+    width: 30%;
+    padding-left: 20px;
+}
+
+.content {
+    float: left;
+    width: 70%;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.logo {
+    border-radius: 5px;
+    padding: 4px;
+    width: 16vw;
+    height: auto;
+    max-width: 100px;
+}
+
+/* Adicionalmente, puedes querer asegurarte de que el logo se mantenga visible y no se haga demasiado pequeño en pantallas muy pequeñas, así que puedes establecer un ancho mínimo también */
+@media (max-width: 600px) {
+    .logo {
+        width: 50px;
+    }
+}
