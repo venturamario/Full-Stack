@@ -1,0 +1,6 @@
+HOST: gdie2408.ltim.uib.es
+USARIO: gdie2408
+PASSWORD: sDFg2wiC
+
+
+ssh gdie2408@gdie2408.ltim.uib.es
