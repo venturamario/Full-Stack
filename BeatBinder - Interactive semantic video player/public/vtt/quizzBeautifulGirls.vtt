@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:10.000 --> 00:00:15.000
+{
+	"pregunta": "¿Cuál es el nombre del artista?",
+	"respuestas": ["Sean Kingston", "Lamine Yamal", "Robert Bryson", "Lewis Michael"],
+	"correcta": 0
+}
+
+2
+00:00:20.000 --> 00:00:25.000
+{
+	"pregunta": "¿Qué posición ocupó la canción en el MTV Asia top 100 Hits de 2007?",
+	"respuestas": ["Puesto nº 1", "Puesto nº 42", "Puesto nº 86", "Puesto nº 100"],
+	"correcta": 2
+}
+
+3
+00:00:30.000 --> 00:00:35.000
+{
+	"pregunta": "¿Qué temática causó polémica por la letra de la canción?",
+    "respuestas": ["El racismo", "El sexismo", "El suicidio", "El veganismo"],
+    "correcta": 2
+}

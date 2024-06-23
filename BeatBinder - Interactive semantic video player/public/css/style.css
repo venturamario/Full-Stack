@@ -248,6 +248,7 @@ a:focus {
 }
 
 /*end header section*/
+
 /* slider section */
 .slider_section {
   -webkit-box-flex: 1;
@@ -288,7 +289,7 @@ a:focus {
 
 .slider_section .detail-box p {
   color: #fefefe;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .slider_section .detail-box .btn-box {
@@ -502,6 +503,10 @@ a:focus {
   border-radius: 5px;
 }
 
+.catalogue_section{
+  background-color: #00204a;
+}
+
 .catalogue_section .box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -571,6 +576,33 @@ a:focus {
   transition: all 0.3s;
 }
 
+.catalogue_section .box .detail-box a {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.catalogue_section .box .detail-box a:hover {
+  color: #00bbf0;
+}
+
+.btn-boxCatalogue a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #00bbf0;
+  color: #ffffff;
+  border-radius: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-left: 50px;
+  margin-right: 35px;
+  margin-top: 25px;
+}
+
+.btn-boxCatalogue a:hover {
+  background-color: #007fa4;
+}
+
 .about_section {
   background-color: #00204a;
   color: #ffffff;
@@ -587,14 +619,10 @@ a:focus {
 }
 
 .about_section .video-box video {
-  max-width: 100%;
+  width: 100%;
 }
-#videoPlayer {
-  background-color: black; /* Establece el fondo del video a negro */
-  width: 854px; /* Ancho fijo */
-  height: 480px; /* Altura fija */
-  object-fit: contain; /* Asegura que el video se ajuste al contenedor sin perder su aspecto */
-}
+
+
 .about_section .detail-box h3 {
   font-size: 35px;
   font-weight: bold;
@@ -1076,15 +1104,25 @@ a:focus {
   font-weight: bolder;
 }
 
+.optionsContainer button {
+  width: 170px; /* Tamaño fijo para los botones */
+  height: 60px; /* Altura fija para los botones */
+  margin: 5px; /* Espaciado entre botones */
+  padding: 0px; /* Espaciado interno dentro del botón */
+  overflow: hidden; /* Evita que el contenido desborde */
+  text-overflow: ellipsis; /* Añade puntos suspensivos si el texto es demasiado largo */
+  white-space: nowrap; /* Evita que el texto ocupe más de una línea */
+  display:inline-block; /* Hace que cada botón sea un bloque, facilitando la alineación */
+  text-align: center; /* Centra el texto horizontalmente */
+}
+
 .buttonOp1 {
   background-color: #dc0d30;
   color: #ffffff;
   display: inline-block;
-  padding: 10px 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
-  margin: 10px;
   font-weight: bolder;
 
   /*Rounded button*/
@@ -1095,11 +1133,9 @@ a:focus {
   background-color: #850c21;
   color: #ffffff;
   display: inline-block;
-  padding: 10px 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
-  margin: 10px;
   font-weight: bolder;
 
   /*Rounded button*/
@@ -1114,7 +1150,6 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
-  margin: 10px;
   font-weight: bolder;
 
   /*Rounded button*/
@@ -1125,11 +1160,10 @@ a:focus {
   background-color: #0f3e78;
   color: #ffffff;
   display: inline-block;
-  padding: 10px 45px;
+  padding: 0px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
-  margin: 10px;
   font-weight: bolder;
 
   /*Rounded button*/
@@ -1140,11 +1174,9 @@ a:focus {
   background-color: #26890c;
   color: #ffffff;
   display: inline-block;
-  padding: 10px 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
-  margin: 10px;
   font-weight: bolder;
 
   /*Rounded button*/
@@ -1155,11 +1187,9 @@ a:focus {
   background-color: #144707;
   color: #ffffff;
   display: inline-block;
-  padding: 10px 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
-  margin: 10px;
   font-weight: bolder;
 
   /*Rounded button*/
@@ -1170,11 +1200,9 @@ a:focus {
   background-color: #ffa602;
   color: #ffffff;
   display: inline-block;
-  padding: 10px 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
-  margin: 10px;
   font-weight: bolder;
 
   /*Rounded button*/
@@ -1185,11 +1213,9 @@ a:focus {
   background-color: #916108;
   color: #ffffff;
   display: inline-block;
-  padding: 10px 45px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
-  margin: 10px;
   font-weight: bolder;
 
   /*Rounded button*/
@@ -1331,4 +1357,355 @@ a:focus {
   max-height: 100%;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+}
+
+/* ------------------------- */
+/* Estilos CSS del Reproductor */
+/* ------------------------- */
+
+/* Asegúrate de que .video-box no sea más alto que el video más los controles */
+.video-box {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  background: #000000;
+}
+
+#videoPlayer {
+  background-color: black;
+  width: 100%;
+  height: calc(100% - 80px);
+  object-fit: contain;
+}
+
+#custom-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0);
+  z-index: 10; /* Asegúrate de que los controles estén por encima del video */
+}
+
+.modos-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px; /* O el espacio que necesites para separarlo de los controles del video */
+  text-align: center;
+}
+
+#play-pause-button {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  cursor: pointer;
+  font-size: 3vw;
+  color: white;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.7);
+}
+
+#progress-bar {
+  position: absolute;
+  width: 100%;
+  height: 10px;
+  background-color: #2d5f85;
+  cursor: pointer;
+  bottom: 40px;
+}
+
+#progress-bar-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  background-color: #1d87d8;
+}
+
+#progress-bar:hover #progress-bar-fill {
+  background-color: white;
+}
+
+/* Control Button Styles */
+.controls-container,
+.buttons-container,
+.advanced-features-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.controls-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; /* Asegúrate de que los controles usen todo el ancho disponible */
+  max-width: 854px; /* Opcional: para limitar el ancho de los controles */
+}
+
+.controls-container.hidden {
+  opacity: 0;
+  height: 0px;
+}
+
+
+.audio-controller {
+  display: flex;
+  gap: 10px;
+}
+
+#volume-icon,
+#rewind-button,
+#forward-button,
+#play-pause,
+#setting_icon,
+#subtitles_icon {
+  color: white;
+  cursor: pointer;
+}
+#setting_icon,
+#subtitles_icon{
+  font-size: 20px;
+}
+#subtitles_icon.fa-closed-captioning.active {
+  box-shadow: 0 2px 0 #1d87d8; /* X-offset, Y-offset, blur-radius, color */
+}
+
+#play-pause {
+  margin-left: 10px;
+}
+
+#forward-button {
+  padding-left: 10px;
+}
+
+.current_time,.totalTime{
+  color: white;
+}
+
+.popover_container.hidden{
+  display: none;
+}
+.popover_container {
+  position: absolute;
+  border: 1px solid #2d5f85(0 80% 20%);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 45%;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 100; /* Asegúrate de que el z-index sea lo suficientemente alto para superponer otros elementos */
+  transform: translate(-90%, 0%); /* Ajusta la posición para que aparezca encima del icono */
+  bottom: 100%; /* Coloca el borde inferior del popover en la parte superior del icono */
+}
+
+
+.popover_options_card{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.popover_options_card i{
+  color: white;
+}
+.popover_options_card button{
+  background-color: transparent;
+  color: white;
+  border: none;
+  
+}
+.popover_selector_container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  border: 1px solid #2d5f85(0 80% 20%);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 30%;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  z-index: 100; 
+  transform: translate(-90%, 0%); 
+  bottom: 100%; 
+}
+.popover_selector_container button{
+  background-color: transparent;
+  color: white;
+  border: none;
+}
+.popover_selector_container button:hover{
+ border-bottom: 0.5px solid #2d5f85;
+}
+.popover_selector_container.hidden{
+  display: none;
+}
+.fa-arrow-left{
+  color: white;
+  cursor: pointer;
+}
+.button_quality.active{
+  box-shadow : 0 2px #1d87d8;
+}
+
+.button-speed.active{
+  box-shadow : 0 2px #1d87d8;
+}
+@media (max-width: 768px) {
+  .rewind-play-forward-container{
+      display: none;
+      ;
+  }    
+  .audio-controller{
+      width: 50%;
+  }
+  #volume-slider{
+      width: 40%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .rewind-play-forward-container{
+      display: none;
+  }    
+  .audio-controller{
+      width: 50%;
+  }
+  #volume-slider{
+      width: 40%;
+  }
+}
+
+/* ESTILOS PARA LA TERCERA PRACTICA DE TIEMPO REAL E IA */
+.divFormSocket {
+  border-radius: 25px;
+  background-color: #00bbf0;
+  align-items: center;
+  text-align: center;
+  margin: 25px;
+  padding: 5px;
+}
+
+.formSocket {
+  margin: 25px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 60%;
+  height: 50px;
+  padding-inline-start: 2%;
+}
+
+.formSocketUsername {
+  margin: 25px;
+  background-color: #ffffff;
+  border-radius: 25px;
+  width: 60%;
+  height: 50px;
+}
+
+.socketButton {
+  background-color: #0f054c;
+  color: #ffffff;
+  display: inline-block;
+  padding: 10px 45px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 15px;
+  font-weight: bolder;
+  border-radius: 25px;
+  max-height: 50px;
+}
+
+.messagesContainer {
+  border-radius: 12px;
+  min-height: 400px;
+  max-height: 400px;
+  background-color: #00204a;
+  align-items: center;
+  text-align: center;
+  margin: 25px;
+  padding: 30px;
+  scrollbar-width: 10px;
+  scrollbar-width: thin;
+  overflow-y: auto;
+}
+
+.message-list {
+  list-style-type: none; /* Eliminar puntos de la lista */
+  padding: 0;
+  margin: 0;
+}
+
+.message {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  max-width: 80%;
+  word-wrap: break-word;
+}
+
+.message .username {
+  font-weight: bold; /* Poner el nombre de usuario en negrita */
+}
+
+.message-left {
+  background-color: #9555fd; /* Color de fondo para mensajes de otros usuarios */
+  text-align: left;
+  margin-top: 15px;
+  border-radius: 25px;
+}
+
+.message-right {
+  background-color: #00bbf0; /* Color de fondo para mis mensajes */
+  text-align: right;
+  margin-left: auto;
+  border-radius: 25px;
+  margin-top: 15px;
+}
+
+.userList {
+  display: flex;
+  gap: 10px; /* Espacio entre cuadraditos */
+  margin-left: 15px;
+}
+
+.userList .user-item {
+  background-color: #00204a; /* Color de fondo del cuadradito */
+  color: white;
+  padding: 10px;
+  border-radius: 25px; /* Redondear los bordes para hacer un círculo */
+  text-align: center;
+  width: auto;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.system-message {
+  text-align: center;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background: none !important; /* Eliminar cualquier fondo */
+}
+
+.liveChatTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.usersConnected {
+  text-align: center;
+  margin-top: 10px;
+  color: #ffffff;
+  font-size: 20px;
 }

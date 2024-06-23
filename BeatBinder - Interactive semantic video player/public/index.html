@@ -27,12 +27,15 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+  <!-- iconos barra reproduccion-->
+  <script src="https://kit.fontawesome.com/de44d10384.js" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/0.8.2/hls.min.js"></script>
 </head>
 
 <body>
-
   <div class="hero_area">
-
     <div class="hero_bg_box">
       <div class="bg_img_box">
         <img src="images/hero-bg.png" alt="">
@@ -57,7 +60,7 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav  ">
               <li class="nav-item active">
-                <a class="nav-link" href="index.html">Inicio <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="service.html">Concepto</a>
@@ -65,15 +68,13 @@
               <li class="nav-item">
                 <a class="nav-link" href="catalogue.html">Catálogo</a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html"> Equipo</a>
-              </li>
             </ul>
           </div>
         </nav>
       </div>
     </header>
     <!-- end header section -->
+
     <!-- slider section -->
     <section class="slider_section ">
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
@@ -92,7 +93,7 @@
                       y artistas favoritos.
                     </p>
                     <div class="btn-box">
-                      <a href="#reproductor" class="btn1">
+                      <a href="#eleccion" class="btn1">
                         Comenzar a jugar
                       </a>
                     </div>
@@ -112,8 +113,7 @@
                 <div class="col-md-6 ">
                   <div class="detail-box">
                     <h1>
-                      Qué<br>
-                      Ofrecemos
+                      Qué Ofrecemos
                     </h1>
                     <p style="text-align: justify;">
                       La plataforma cuenta con diferentes cuestionarios sobre diferentes canciones, sus letras,
@@ -123,7 +123,7 @@
                       a aquello que el artista quiere transmitir.
                     </p>
                     <div class="btn-box">
-                      <a href="#reproductor" class="btn1">
+                      <a href="#eleccion" class="btn1">
                         Comenzar a jugar
                       </a>
                     </div>
@@ -152,7 +152,7 @@
                       Ambos cuentan con experiencia trabajando con HTML5, CSS3 y JavaScript.
                     </p>
                     <div class="btn-box">
-                      <a href="#reproductor" class="btn1">
+                      <a href="#eleccion" class="btn1">
                         Comenzar a jugar
                       </a>
                     </div>
@@ -202,11 +202,9 @@
                   Variedad musical
                 </h5>
                 <p>
-                  La plataforma cuenta con canciones de diferentes géneros, épocas y artistas, tocando todas las ramas de la música. La variedad musical va de la mano con Beat Binder.
+                  La plataforma cuenta con canciones de diferentes géneros, épocas y artistas, tocando todas las ramas
+                  de la música. La variedad musical va de la mano con Beat Binder.
                 </p>
-                <a href="#reproductor">
-                  Probar Beat Binder
-                </a>
               </div>
             </div>
           </div>
@@ -220,16 +218,17 @@
                   Reproductor de vídeo
                 </h5>
                 <p>
-                 Beat Binder cuenta con un reproductor de vídoes de gran calidad para maximizar la experiencia del usuario en la plataforma. 
+                  Beat Binder cuenta con un reproductor de vídoes de gran calidad para maximizar la experiencia del
+                  usuario en la plataforma.
+                  <br>
+                  <br>
+                  <br>
                 </p>
-                <a href="#reproductor">
-                  Probar Beat Binder
-                </a>
               </div>
             </div>
           </div>
           <div class="col-md-4 ">
-            <div class="box ">
+            <div class="box">
               <div class="img-box">
                 <img src="images/s3.png" alt="">
               </div>
@@ -238,11 +237,9 @@
                   Preguntas interesantes
                 </h5>
                 <p>
-                  Cada canción cuenta con un videoclip y con unas preguntas asociadas. Estas preguntas permitirán al usuario descubrir cuánto sabe sobre esa canción y hasta aprender nuevas curiosidades.
+                  Cada canción cuenta con un videoclip y con unas preguntas asociadas. Estas preguntas permitirán al
+                  usuario descubrir cuánto sabe sobre esa canción y hasta aprender nuevas curiosidades.
                 </p>
-                <a href="#reproductor">
-                  Probar Beat Binder
-                </a>
               </div>
             </div>
           </div>
@@ -252,81 +249,109 @@
   </section>
   <!-- end of concept section -->
 
-<!-- choice section -->
-<section class="choice_section layout_padding">
-  <div class="service_container">
-    <div class="container ">
-      <div class="heading_container heading_center">
-        <h2>
-          Elección de <span>Canción</span>
-        </h2>
-        <p>
-          Selecciona la canción con la que quieres comenzar a interactuar
-        </p>
-      </div>
-      <div class="row">
-        <div class="col-md-4 ">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/amorfoda.jpg" alt="">
-            </div> 
-            <div class="detail-box">
-              <a href="#reproductor"
-              data-video-id= "video0"
-              data-src-normal = "videos/BAD BUNNY - AMORFODA (Video Oficial).mp4"
-              data-src-karaoke = "videos/AMORFODA VIDEO KARAOKE.mp4"
-              data-vtt="vtt/amorfoda.vtt"
-              class="change-video"
-              style="font-size: 24px;">
-                AMORFODA
-              </a>
+  <!-- choice section -->
+  <section class="choice_section layout_padding" id="eleccion">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Elección de <span>Canción</span>
+          </h2>
+          <p>
+            Selecciona la canción con la que quieres comenzar a interactuar
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="catalogueImage">
+                <a href="#reproductor" data-video-id="video0"
+                  data-src-normal="videos/BAD BUNNY - AMORFODA (Video Oficial).mp4"
+                  data-src-normal="videos/BAD BUNNY - AMORFODA (Video Oficial).webm"
+                  data-src-1080="videos/amorfoda_1080p.mp4" data-src-720="videos/amorfoda_720p.mp4"
+                  data-src-360="videos/amorfoda_360p.mp4" data-audio-normal="audio/BAD BUNNY - AMORFODA (AUDIO).mp3"
+                  data-audio-karaoke="audio/AMORFODA KARAOKE.mp3" data-lang="es" data-vtt="vtt/amorfoda.vtt"
+                  data-quizz="vtt/quizzAmorfoda.vtt" class="change-video">
+                  <img src="images/amorfoda.jpg" alt="Amorfoda cover">
+                </a>
+              </div>
+              <div class="detail-box">
+                <a href="#reproductor" data-video-id="video0"
+                  data-src-normal="videos/BAD BUNNY - AMORFODA (Video Oficial).mp4"
+                  data-src-normal="videos/BAD BUNNY - AMORFODA (Video Oficial).webm"
+                  data-src-1080="videos/amorfoda_1080p.mp4" data-src-720="videos/amorfoda_720p.mp4"
+                  data-src-360="videos/amorfoda_360p.mp4" data-audio-normal="audio/BAD BUNNY - AMORFODA (AUDIO).mp3"
+                  data-audio-karaoke="audio/AMORFODA KARAOKE.mp3" data-lang="es" data-vtt="vtt/amorfoda.vtt"
+                  data-quizz="vtt/quizzAmorfoda.vtt" class="change-video" style="font-size: 24px;">
+                  Amorfoda
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 ">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/beautifulgirls.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <a href="#reproductor"
-              data-video-id="video1"
-              data-src-normal = "videos/Sean Kingston - Beautiful Girls (Official HD Video).mp4" 
-              data-src-karaoke = "videos/BeautifulGirlsKaraoke.mp4" 
-              data-vtt="vtt/beautifulgirls.vtt" 
-              class="change-video" 
-              style="font-size: 24px;">
-                BEAUTIFUL GIRLS
-              </a>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="catalogueImage">
+                <a href="#reproductor" data-video-id="video1"
+                  data-src-normal="videos/Sean Kingston - Beautiful Girls (Official HD Video).mp4"
+                  data-src-normal="videos/Sean Kingston - Beautiful Girls (Official HD Video).webm"
+                  data-src-1080="videos/bg_1080p.mp4" data-src-720="videos/bg_720p.mp4"
+                  data-src-360="videos/bg_360p.mp4"
+                  data-audio-normal="audio/Sean Kingston - Beautiful Girls (AUDIO).mp3"
+                  data-audio-karaoke="audio/BeautifulGirls KARAOKE.mp3" data-lang="en" data-vtt="vtt/beautifulgirls.vtt"
+                  data-vtt-trad="vtt/beautifulgirlsES.vtt" data-quizz="vtt/quizzBeautifulGirls.vtt"
+                  class="change-video">
+                  <img src="images/beautifulgirls.jpg" alt="Beautiful Girls cover">
+                </a>
+              </div>
+              <div class="detail-box">
+                <a href="#reproductor" data-video-id="video1"
+                  data-src-normal="videos/Sean Kingston - Beautiful Girls (Official HD Video).mp4"
+                  data-src-normal="videos/Sean Kingston - Beautiful Girls (Official HD Video).webm"
+                  data-src-1080="videos/bg_1080p.mp4" data-src-720="videos/bg_720p.mp4"
+                  data-src-360="videos/bg_360p.mp4"
+                  data-audio-normal="audio/Sean Kingston - Beautiful Girls (AUDIO).mp3"
+                  data-audio-karaoke="audio/BeautifulGirls KARAOKE.mp3" data-lang="en" data-vtt="vtt/beautifulgirls.vtt"
+                  data-vtt-trad="vtt/beautifulgirlsES.vtt" data-quizz="vtt/quizzBeautifulGirls.vtt" class="change-video"
+                  style="font-size: 24px;">
+                  Beautiful Girls
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4 ">
-          <div class="box ">
-            <div class="img-box">
-              <img src="images/laultima.jpg" alt="">
-            </div>
-            <div class="detail-box">
-              <a href="#reproductor"
-              data-video-id="video2" 
-              data-src-normal = "videos/LA ÚLTIMA - Quevedo (Video Oficial).mp4" 
-              data-src-karaoke = "videos/LaUltima Karaoke.mp4" 
-              data-vtt="vtt/laultima.vtt" 
-              class="change-video" 
-              style="font-size: 24px;">
-                LA ÚLTIMA
-              </a>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="catalogueImage">
+                <a href="#reproductor" data-video-id="video2"
+                  data-src-normal="videos/LA ÚLTIMA - Quevedo (Video Oficial).mp4"
+                  data-src-normal="videos/LA ÚLTIMA - Quevedo (Video Oficial).webm" data-src-1080="videos/lu_1080p.mp4"
+                  data-src-720="videos/lu_720p.mp4" data-src-360="videos/lu_360p.mp4"
+                  data-audio-normal="audio/LA ÚLTIMA - Quevedo (AUDIO).mp3"
+                  data-audio-karaoke="audio/LaUltima KARAOKE.mp3" data-lang="es" data-vtt="vtt/laultima.vtt"
+                  data-quizz="vtt/quizzLaUltima.vtt" class="change-video">
+                  <img src="images/laultima.jpg" alt="La ÚLtima cover">
+                </a>
+              </div>
+              <div class="detail-box">
+                <a href="#reproductor" data-video-id="video2"
+                  data-src-normal="videos/LA ÚLTIMA - Quevedo (Video Oficial).mp4"
+                  data-src-normal="videos/LA ÚLTIMA - Quevedo (Video Oficial).webm" data-src-1080="videos/lu_1080p.mp4"
+                  data-src-720="videos/lu_720p.mp4" data-src-360="videos/lu_360p.mp4"
+                  data-audio-normal="audio/LA ÚLTIMA - Quevedo (AUDIO).mp3"
+                  data-audio-karaoke="audio/LaUltima KARAOKE.mp3" data-lang="es" data-vtt="vtt/laultima.vtt"
+                  data-quizz="vtt/quizzLaUltima.vtt" class="change-video" style="font-size: 24px;">
+                  La Última
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="js/changeVideo.js"></script>
-  <script src="js/subtitulos.js"></script>
-</section>
+    <script src="js/changeVideo.js"></script>
+    <script src="js/subtitulos.js"></script>
+  </section>
 
-<!-- end choice section -->
+  <!-- end choice section -->
 
   <!-- player section -->
 
@@ -337,20 +362,84 @@
           Comienza a jugar con <span>Beat Binder</span>
         </h2>
         <p class="h5">
-          A continuación, podrás ver la letra de la canción seleccionada, su traducción en caso de que sea en inglés, activar modo karaoke
+          A continuación, podrás ver la letra de la canción seleccionada, su traducción en caso de que sea en inglés,
+          activar modo karaoke
           y además puedes activar el modo juego para que que se vayan haciendo preguntas acerca de la canción.
         </p>
       </div>
       <div class="row">
         <div class="col-md-7">
           <div class="video-box">
-            <video id="videoPlayer" controls="" loop="">
-              <track kind="subtitles" label="Español" srclang="es" default>
-            </video>
-            <div style="text-align: center;">
-              <button id="karaokeMode" class="mainButtonStyle" style="display: inline-block; margin-right: 20px;">ACTIVAR MODO KARAOKE</button>
-              <button id="quizzModeBtn" class="mainButtonStyle">ACTIVAR MODO QUIZZ</button>
+            <video id="videoPlayer"></video>
+            <i id="play-pause-button" class="fas fa-play"></i>
+            <div id="custom-controls">
+              <div id="progress-bar">
+                <div id="progress-bar-fill"></div>
+              </div>
+              <div class="controls-container">
+                <div class="buttons-container">
+                  <div class="rewind-play-forward-container" style="margin-left: 15px;">
+                    <i id="rewind-button" class="fas fa-backward"></i>
+                    <i id="play-pause" class="fas fa-play"></i>
+                    <i id="forward-button" class="fas fa-forward"></i>
+                  </div>
+                  <div class="audio-controller">
+                    <i id="volume-icon" class="fas fa-volume-down"></i>
+                    <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+                  </div>
+                  <div class="time-container">
+                    <span class="current_time">0:00</span> <span style="color: white;">/ </span><span
+                      class="totalTime">0:00</span>
+                  </div>
+                </div>
+                <div class="advanced-features-container" style="gap: 50px;">
+                  <div class="settings">
+                    <i id="setting_icon" class="fas fa-cog" style="margin-right: 10px;"></i>
+                    <div class="popover_container hidden">
+                      <div class="popover_options_card">
+                        <i class="fas fa-language"></i>
+                        <button class="popover_options" data-target="options_lenguage">Subtitulos</button>
+                      </div>
+                      <div class="popover_options_card">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <button class="popover_options" data-target="options_speed">Velocidad</button>
+                      </div>
+                      <div class="popover_options_card">
+                        <i class="fas fa-sliders-h"></i>
+                        <button class="popover_options" data-target="options_quality">Calidad</button>
+                      </div>
+                    </div>
+                    <div id="options_lenguage" class="popover_selector_container hidden">
+                      <i data-target="options_lenguage" class="fas fa-arrow-left"></i>
+                      <button class="button-lenguage" id="button-en" value="en">Inglés</button>
+                      <button class="button-lenguage" id="button-es" value="es">Castellano</button>
+                    </div>
+                    <div id="options_speed" class="popover_selector_container hidden">
+                      <i data-target="options_speed" class="fas fa-arrow-left"></i>
+                      <button class="button-speed" value="0.5">0.5</button>
+                      <button class="button-speed active" value="1">1</button>
+                      <button class="button-speed" value="1.5">1.5</button>
+                      <button class="button-speed" value="2">2</button>
+                    </div>
+                    <div id="options_quality" class="popover_selector_container hidden">
+                      <i data-target="options_quality" class="fas fa-arrow-left"></i>
+                      <button class="button-quality active" id="1080p">1080p</button>
+                      <button class="button-quality" id="720p">720p</button>
+                      <button class="button-quality" id="360p">360p</button>
+                      <button class="button-quality" id="DASH">DASH</button>
+                      <button class="button-quality" id="HLS">HLS</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+            <audio id="audioPlayer"></audio>
+          </div>
+          <div class="modos-container">
+            <button id="karaokeMode" class="mainButtonStyle" style="display: inline-block; margin-right: 20px;">ACTIVAR
+              MODO
+              KARAOKE</button>
+            <button id="quizzModeBtn" class="mainButtonStyle">ACTIVAR MODO QUIZZ</button>
           </div>
         </div>
         <div class="col-md-5">
@@ -369,8 +458,136 @@
               <button class="buttonOp4" id="option3">Opción 4</button>
             </div>
             <p id="messageText" class="h4">
-              
+
             </p>
+          </div>
+        </div>
+        <div class="col-md-12" style="margin-top: 50px;">
+          <div class="" style="margin-top: 25px;">
+            <h2 id="liveChatTitle" class="liveChatTitle">
+              Regístrate para usar el chat <span>en vivo</span>
+            </h2>
+          </div>
+          <div>
+            <!-- Form de enviar mensajes -->
+            <form id="form" action="" class="divFormSocket">
+              <div id="usersContainer">
+                <h3 class="usersConnected">Usuarios Conectados</h3>
+                <div id="usersList" class="userList"></div>
+              </div>
+              <div class="messagesContainer">
+                <ul id="messages" class="message-list"></ul>
+              </div>
+              <div>
+                <input id="input" autocomplete="off" class="formSocket" placeholder="Escribe un mensaje" maxlength="200"/>
+                <button id="sendButtonSocket" class="socketButton">ENVIAR</button>
+              </div>
+            </form>
+            <!-- Form de registrar usuario-->
+            <form id="formUsername" action="" class="divFormSocket">
+              <div class="" style="text-align: center;">
+                <input id="inputUsername" class="formSocketUsername" placeholder="Ingresa tu nombre de usuario"
+                  style="padding-inline-start: 2%;" maxlength="20"/>
+                <button class="socketButton" id="registerButton">Registrarse</button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <script src="/socket.io/socket.io.js"></script>
+
+            <!-- FUNCIONALIDADES SOCKET-->
+            <script>
+              const socket = io();
+              const messages = document.getElementById('messages');
+              const form = document.getElementById('form');
+              const input = document.getElementById('input');
+              const inputUsername = document.getElementById('inputUsername');
+              const formUsername = document.getElementById('formUsername');
+              const chatTitle = document.getElementById('liveChatTitle');
+
+              let username = ' ';
+
+              // ocultar hasta que se haya registrado
+              form.style.display = 'none';
+
+              // Añadir usarname
+              formUsername.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (inputUsername.value) {
+                  username = inputUsername.value.trim();
+                  console.log(`Attempting to join with username: ${username}`);
+                  socket.emit('join', { username });
+                  inputUsername.value = '';
+                }
+              });
+
+              // Enviar mensaje
+              form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                if (input.value) {
+                  socket.emit('chat message', { username, message: input.value });
+                  input.value = '';
+                }
+              });
+
+              socket.on('chat message', function (data) {
+                const item = document.createElement('li');
+                item.classList.add('message');
+                if (data.username === username) {
+                  item.classList.add('message-right');
+                } else {
+                  item.classList.add('message-left');
+                }
+                item.innerHTML = `<span class="username">${data.username}</span>: ${data.message}`;
+                messages.appendChild(item);
+                messages.scrollTop = messages.scrollHeight;
+              });
+
+              // Manejar el evento cuando el usuario se une exitosamente
+              socket.on('user joined', function (data) {
+                if (data.username === username) {
+                  formUsername.style.display = 'none'; // Ocultar el formulario de registro
+                  form.style.display = 'block'; // Mostrar el formulario de mensajes
+                  chatTitle.textContent = 'Chat en vivo';
+                }
+                const message = document.createElement('li');
+                message.classList.add('message', 'message-left', 'system-message');
+                const div_message = document.createElement('div');
+                div_message.classList.add('greeting-div', 'rounded', 'rounded-2', 'd-inline', 'p-1');
+                div_message.innerHTML = `<i>${data.username}</i> se unió al chat!`;
+                message.appendChild(div_message);
+                messages.appendChild(message);
+                messages.scrollTop = messages.scrollHeight; // Desplazarse automáticamente hacia abajo
+              });
+
+              socket.on('user list', function (users) {
+                const usersList = document.getElementById('usersList');
+                usersList.innerHTML = '';
+                users.forEach(user => {
+                  const userItem = document.createElement('div');
+                  userItem.classList.add('user-item');
+                  userItem.textContent = user;
+                  usersList.appendChild(userItem);
+                });
+              });
+
+              socket.on('user left', function (username) {
+                const message = document.createElement('li');
+                message.classList.add('system-message'); // Añadir clase para mensaje del sistema
+                message.textContent = `${username} se fue del chat!`;
+                messages.appendChild(message);
+              });
+
+              // Manejar el evento cuando el nombre de usuario ya está tomado
+              socket.on('username taken', function (username) {
+                alert(`El nombre de usuario "${username}" ya está tomado. Por favor, elige otro nombre.`);
+                formUsername.style.display = 'block'; // Mostrar el formulario de registro
+                form.style.display = 'none'; // Ocultar el formulario de mensajes
+                chatTitle.textContent = 'Regístrate para usar el chat en vivo';
+              });
+
+            </script>
+
           </div>
         </div>
       </div>
@@ -379,6 +596,8 @@
     <script src="js/quizzMode.js"></script>
     <script src="js/changeVideo.js"></script>
     <script src="js/subtitulos.js"></script>
+    <script src="js/reproductor.js"></script>
+
   </section>
   <!-- end player section -->
 
@@ -432,6 +651,98 @@
   </section>
 
   <!-- end team section -->
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Dirección
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Oficinas Beat Binder
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Llamar +34 1234567890
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  info@beatbinder.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4>
+            <p>
+              Este proyecto es una idea original propiedad de Mario Ventura & Luis Miguel Vargas implementada para la
+              asignatura Gestión y distribución de la información empresarial
+            </p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="active" href="index.html">
+                Inicio
+              </a>
+              <a class="" href="service.html">
+                Concepto
+              </a>
+              <a class="" href="catalogue.html">
+                Catalogo
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Suscríbete
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Introduce tu email" />
+            <button type="submit">
+              Suscribirse
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
 
   <!-- example of footer section -->
   <section class="footer_section">

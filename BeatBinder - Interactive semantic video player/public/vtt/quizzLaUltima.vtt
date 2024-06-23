@@ -1,0 +1,25 @@
+WEBVTT
+
+1
+00:00:10.000 --> 00:00:15.000
+{
+	"pregunta": "¿En qué año nació Quevedo?",
+	"respuestas": ["2001", "2000", "2002", "1999"],
+	"correcta": 0
+}
+
+2
+00:00:20.000 --> 00:00:25.000
+{
+	"pregunta": "¿Qué productor musical ha participado en la producción de la canción?",
+	"respuestas": ["KIDDO Manteca", "Blasfem", "Dualy", "Sky Rompiendo"],
+	"correcta": 0
+}
+
+3
+00:00:30.000 --> 00:00:35.000
+{
+	"pregunta": "¿Qué artista no aparece en el videoclip de 'La Última'?",
+        "respuestas": ["Myke Towers", "Ill Pekeño", "Saiko", "Yandel"],
+        "correcta": 0
+}
