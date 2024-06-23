@@ -11,14 +11,13 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
     <meta name="author" content="" />
+    <meta name="description"
+        content="Insularium, donde se ofrece la mejor experiencia de cine posible en las Islas Baleares">
     <link rel="icon" type="image/x-icon" href="favicon/icon.ico">
     <script type="module" src="js/custom.js"></script>
-    <script type="text/javascript" src="js/custom.js"></script>
     <script type="application/ld+json" id="WebSemantica_cines"> </script>
 
     <title>Insularium</title>
-    <meta name="description"
-        content="Insularium, donde se ofrece la mejor experiencia de cine posible en las Islas Baleares">
     <!-- bootstrap core css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
     <!-- fonts style -->
@@ -53,10 +52,10 @@
     <div class="hero_area">
         <div class="hero_bg_box">
             <div class="bg_img_box">
-                <img src="images/hero-bg1.png" alt="background">
+                <img src="images/contact-bg.jpg" alt="background">
             </div>
         </div>
-        <!-- header -->
+        <!-- Header -->
         <header class="header_section">
             <div class="container-fluid">
                 <nav class="navbar navbar-expand-lg custom_nav-container ">
@@ -81,11 +80,12 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="cines.html">Cines</a>
                             </li>
-                            <li class="nav-item active">
-                                <a class="nav-link" href="team.html">Equipo<span class="sr-only">(current)</span></a>
-                            </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="contact.html">Contacto</a>
+                                <a class="nav-link" href="team.html">Equipo</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="contact.html">Contacto<span
+                                        class="sr-only">(current)</span></a>
                             </li>
                         </ul>
                     </div>
@@ -102,85 +102,37 @@
             </div>
         </header>
 
-        <section class="team_section layout_padding">
-            <div class="container-fluid">
-                <div class="heading_container heading_center">
-                    <h2>
-                        Miembros
-                    </h2>
-                </div>
-                <div class="team_container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="box">
-                                <button class="team-button" onclick="show('sasha')">
-                                    <div class="img-box">
-                                        <img src="images/creadores/sasha.webp">
-                                    </div>
-                                </button>
-                                <div class="detail-box">
-                                    <h5>
-                                        Sasha Cammarata
-                                    </h5>
-                                    <p>
-                                        Estudiante del grado en Ingeniería Informática. <br>
-                                        Sistemas de Información <br>
-                                        HTML5, CSS3 y JavaScript
-                                    </p>
+        <!-- FORM DE CONTACTO -->
+        <section class="contact_section">
+            <div class="cards1">
+                <div class="container container-hero-phone">
+                    <div class="card-slider-title-container related hero-fristone-tablet">
+                        <div class="contact-section">
+                            <div class="contact-container">
+                                <div class="left-section">
+                                    <img src="images/chaplin.gif">
+                                    <h1 class="h1contact">Vamos a hablar</h1>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="box">
-                                <button class="team-button" onclick="show('mario')">
-                                    <div class="img-box">
-                                        <img src="images/creadores/mario.webp">
+                                <div class="right-section" style="margin-left: 30px;">
+                                    <div class="main-form">
+                                        <form id="email-form" action="https://formspree.io/f/xvoeyrzk" method="POST"
+                                            name="email-form" data-name="email-form">
+                                            <input type="text" class="input-field form1 w-field" maxlength="256"
+                                                name="name" data-name="Name" placeholder="Tu nombre" id="name" required>
+                                            <input type="email" class="input-field w-field" maxlength="256" name="email"
+                                                data-name="Email" placeholder="Tu email" id="email" required>
+
+                                            <textarea name="field" maxlength="5000" id="field"
+                                                class="textarea-field w-input" required
+                                                placeholder="Escríbenos algo..."></textarea>
+                                            <input type="submit" value="Enviar" data-wait="Por favor, espera..."
+                                                class="submit-button form-button w-button"></input>
+                                        </form>
                                     </div>
-                                </button>
-                                <div class="detail-box">
-                                    <h5>
-                                        Mario Ventura
-                                    </h5>
-                                    <p>
-                                        Estudiante del grado en Ingeniería Informática. <br>
-                                        Sistemas de Información <br>
-                                        HTML5, CSS3 y JavaScript
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-sm-6">
-                            <div class="box">
-                                <button class="team-button" onclick="show('enrique')">
-                                    <div class="img-box">
-                                        <img src="images/creadores/enrique.webp">
-                                    </div>
-                                </button>
-                                <div class="detail-box">
-                                    <h5>
-                                        José Enrique Sánchez
-                                    </h5>
-                                    <p>
-                                        Estudiante del grado en Ingeniería Informática. <br>
-                                        Sistemas de Información <br>
-                                        HTML5, CSS3 y JavaScript
-                                    </p>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="info_section layout_padding" id="info" style="display: none;">
-            <div class="container-fluid">
-                <div class="heading_container heading_center">
-                    <h2>
-                        Información
-                    </h2>
-                </div>
-                <div class="info_container" id="info_container">
                 </div>
             </div>
         </section>

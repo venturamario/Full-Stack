@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 
 <head>
   <!-- Basic -->
@@ -12,9 +12,34 @@
   <meta name="description" content="" />
   <meta name="author" content="" />
   <link rel="icon" type="image/x-icon" href="favicon/icon.ico">
-  <script type="text/javascript" src="js/custom.js"></script>
+  <script type="module" src="js/custom.js"></script>
+  <script src=js/loadFilms.js></script>
+  <script src="js/load.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/videoControls.js"></script>
+  <script type=" application/ld+json" id="WebSemanticaTitle">
+  {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Insularium",
+  "url": "https://www.cinesinsularium.com",
+  "description": "Página web con información sobre las proyecciones de películas en Baleares",
+  "publisher": {
+  "@type": "Organization",
+  "name": "Insularium",
+  "url": "https://www.cinesinsularium.com",
+  "logo": {
+  "@type": "ImageObject",
+  "url": "https://cinesinsularium.com/favicon/icon.ico"
+  }
+  },
+  }
+  </script>
+  <script type="application/ld+json" id="WebSemantica_cines"> </script>
 
   <title>Insularium</title>
+  <meta name="description"
+    content="Insularium, donde se ofrece la mejor experiencia de cine posible en las Islas Baleares">
 
   <!-- bootstrap core css -->
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -27,10 +52,26 @@
   <link href="css/font-awesome.min.css" rel="stylesheet" />
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet" />
+  <!-- ICONOS DEL REPRODUCTOR DE VIDEO -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
+    </script>
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6KMC1ZYST"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-Z6KMC1ZYST');
+  </script>
 
 </head>
 
@@ -62,7 +103,10 @@
                 <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="films.html">Cartelera</a>
+                <a class="nav-link" href="films.html">Peliculas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="cines.html">Cines</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="team.html">Equipo</a>
@@ -72,11 +116,13 @@
               </li>
             </ul>
           </div>
+          <br>
           <div class="search-bar-container">
-            <input type="text" placeholder="Search...">
+            <input type="text" class="typeahead" data-provide="typeahead"
+              placeholder="Introduce el título de la película">
             <button>
               <div class="lupa-img">
-                <img src="images/lupa.png" alt="lupa">
+                <img src="images/lupa.svg" alt="lupa">
               </div>
             </button>
           </div>
@@ -89,110 +135,6 @@
       <div class="heading_container heading_center">
         <div id="customCarousel1" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            <!-- PELICULA 1 -->
-            <div class="carousel-item active">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-6 ">
-                    <div class="detail-box">
-                      <h1>Oppenheimer</h1>
-                      <h4>3h 00min | 2023 (USA)</h4>
-                      <a href="#" class="tag-movie-hero">Drama</a>
-                      <a href="#" class="tag-movie-hero">Thriller</a>
-                      <h2>Director: Cristopher Nolan</h2>
-                      <h3>Stars: Cillian Murphy, Robert Downey Jr, Emily Blunt</h3>
-                      <div class="btn-box">
-                        <button class="button" target="_blank"
-                          onclick="location.href='https://www.youtube.com/watch?v=MVvGSBKV504';"> Watch trailer
-                        </button>
-                        <button class="button" target="_blank"
-                          onclick="location.href='https://es.wikipedia.org/wiki/Oppenheimer_(pel%C3%ADcula)';"> Read
-                          more </button>
-                      </div>
-                      <div class="ratings">
-                        <span class="rating"><img src="images/imdb.png" alt="IMDB Rating"> 8.4</span>
-                        <span class="rating"><img src="images/filmaffinity.png" alt="FA Rating"> 7.5</span>
-                        <span class="rating"><img src="images/rottentomatoes.png" alt="RT Rating"> 93%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="img-box">
-                      <img src="images/oppenheimer.jpg" alt="oppenheimer">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- PELICULA 2 -->
-            <div class="carousel-item ">
-              <div class="container ">
-                <div class="row">
-                  <div class="col-md-6 ">
-                    <div class="detail-box">
-                      <h1>Barbie</h1>
-                      <h4>1h 54min | 2023 (USA)</h4>
-                      <a href="#" class="tag-movie-hero">Comedia</a>
-                      <h2>Director: Greta Gerwig</h2>
-                      <h3>Stars: Margot Robbie, Ryan Gosling, America Ferrera</h3>
-                      <div class="btn-box">
-                        <button class="button" target="_blank"
-                          onclick="location.href='https://www.youtube.com/watch?v=pBk4NYhWNMM';"> Watch trailer
-                        </button>
-                        <button class="button" target="_blank"
-                          onclick="location.href='https://es.wikipedia.org/wiki/Barbie_(pel%C3%ADcula)';"> Read more
-                        </button>
-                      </div>
-                      <div class="ratings">
-                        <span class="rating"><img src="images/imdb.png" alt="IMDB Rating"> 6.9</span>
-                        <span class="rating"><img src="images/filmaffinity.png" alt="FA Rating"> 5.9</span>
-                        <span class="rating"><img src="images/rottentomatoes.png" alt="RT Rating"> 88%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="img-box">
-                      <img src="images/barbie.jpg" alt="oppenheimer">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="container ">
-                <div class="row">
-                  <div class="col-md-6 ">
-                    <div class="detail-box">
-                      <h1>El Chico y la Garza</h1>
-                      <h4>2h 04min | 2023 (JAP)</h4>
-                      <a href="#" class="tag-movie-hero">Fantasía</a>
-                      <a href="#" class="tag-movie-hero">Drama</a>
-                      <h2>Director: Hayao Miyazaki</h2>
-                      <h3>Stars: Soma Santoki, Masaki Suda, Kô Shibasaki</h3>
-                      <div class="btn-box">
-                        <button class="button" target="_blank"
-                          onclick="location.href='https://www.youtube.com/watch?v=d5rEbP4rj-Y';"> Watch trailer
-                        </button>
-                        <button class="button" target="_blank"
-                          onclick="location.href='https://es.wikipedia.org/wiki/Kimitachi_wa_D%C5%8D_Ikiru_ka_(pel%C3%ADcula_de_2023)';">
-                          Read more </button>
-                      </div>
-                      <div class="ratings">
-                        <span class="rating"><img src="images/imdb.png" alt="IMDB Rating"> 7.6</span>
-                        <span class="rating"><img src="images/filmaffinity.png" alt="FA Rating"> 7.2</span>
-                        <span class="rating"><img src="images/rottentomatoes.png" alt="RT Rating"> 97%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="img-box">
-                      <img src="images/garza.jpg" alt="el chico y la garza">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <!-- PELICULA 3 -->
           </div>
           <ol class="carousel-indicators">
             <li data-target="#customCarousel1" data-slide-to="0" class="active"></li>
@@ -204,43 +146,35 @@
     </section>
   </div>
 
+  <!-- Insularium Explanation Section -->
+  <section class="insularium_about_section">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h2>Acerca de <strong>Insularium</strong></h2>
+          <p>Insularium es una webapp diseñada para ofrecer a los habitantes y visitantes
+            de <strong>Baleares</strong> la mejor experiencia de cine posible. Aquí podrás encontrar información
+            actualizada sobre cartelera, horarios, y eventos especiales en los cines de toda la isla,
+            facilitando el acceso a la cultura cinematográfica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CATEGORIES SECTION -->
   <section class="choice_section layout_padding">
     <!-- COMEDY SECTION-->
     <div class="cards1">
       <div class="container container-hero-phone">
         <div class="card-slider-title-container related hero-fristone-tablet">
-          <h1>Únicas en su categoría<br><br></h1>
+          <h1>Destacadas en su categoría<br><br></h1>
           <div class="title-card-slider">
             <h2>Comedia</h2>
-            <a href="#comedia" class="see-all-link">Ver todo</a>
+            <a href="films.html#Comedia" class="see-all-link">Ver todo</a>
           </div>
-          <div class="films-slider">
-            <div class="row text-center">
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/comedia/lebowski.jpg" alt="El gran lebowski">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/comedia/resacon.jpg" alt="Resacon en las vegas">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/comedia/budapest.jpg" alt="El gran hotel budapest">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/comedia/tropicthunder.jpg" alt="Tropic Thunder">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/comedia/ochoapellidosvascos.jpg" alt="Ocho apellidos vascos">
-                </div>
+          <div id="Comedia">
+            <div class="films-slider">
+              <div class="row text-center">
               </div>
             </div>
           </div>
@@ -255,35 +189,12 @@
       <div class="container container-hero-phone">
         <div class="card-slider-title-container related hero-fristone-tablet">
           <div class="title-card-slider">
-            <h2>Thriller</h2>
-            <a href="#thriller" class="see-all-link">Ver todo</a>
+            <h2>Drama</h2>
+            <a href="films.html#Drama" class="see-all-link">Ver todo</a>
           </div>
-          <div class="films-slider">
-            <div class="row text-center">
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/thriller/elnombredelarosa.jpg" alt="El nombre de la rosa">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/thriller/psycho.jpg" alt="Psycho">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/thriller/seven.jpg" alt="Seven">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/thriller/shutterisland.jpg" alt="Shutter Island">
-                </div>
-              </div>
-              <div class="col-md-2">
-                <div class="filmSlider">
-                  <img src="images/thriller/silenceoffthelambs.jpeg" alt="Silence of the lambs">
-                </div>
+          <div id="Drama">
+            <div class="films-slider">
+              <div class="row text-center">
               </div>
             </div>
           </div>
@@ -292,42 +203,63 @@
     </div>
   </section>
 
-  <!-- LISTS SECTION -->
-  <section class="choice_section layout_padding">
-    <!-- COMEDY SECTION-->
-    <div class="cards1">
-      <div class="container container-hero-phone">
-        <div class="card-slider-title-container related hero-fristone-tablet">
-          <div class="lists-slider">
-            <div class="row text-center">
-              <div class="col-md-3">
-                <div class="listSlider">
-                  <h2 class="h2Authors">Listas</h2>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="listSlider" id="Charlie Chaplin">
-                  <img class="desvanecer" src="images/authors/Charlie_Chaplin.jpg" alt="Charlie Chaplin">
-                  <p>Charile Chaplin</p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="listSlider" id="John Wayne">
-                  <img src="images/authors/johnwayne.jpg" alt="John Wayne">
-                  <p>John Wayne</p>
-                </div>
-              </div>
-              <div class="col-md-3">
-                <div class="listSlider" id="Fritz Lang">
-                  <img src="images/authors/fritzlang.jpg" alt="Fritz Lang">
-                  <p>Fritz Lang</p>
-                </div>
-              </div>
-            </div>
+  <!-- VIDEO PLAYER SECTION -->
+  <section class="videoPlayer">
+    <div class="container">
+      <!-- Videos -->
+      <video class="video-item" src="videos/PresentacionMiembros.mp4" height="auto" width="100%" id="video-cines"
+        preload="metadata">
+        <source src="videos/PortoPiCine.mp4">
+      </video>
+      <!-- Barra de progreso del vídeo -->
+      <div class="video-controls">
+        <div class="video-timeline pt-2">
+          <div class="progress-container">
+            <div class="progress-bar"></div>
           </div>
         </div>
+        <!-- Controles del vídeo -->
+        <ul class="video-options px-0">
+          <li class="options">
+            <!-- Tiempos del video -->
+            <div class="video-timer pt-3">
+              <p class="current-time">00:00</p>
+              <p class="time-sep">&nbsp/&nbsp</p>
+              <p class="end-time">15:00</p>
+            </div>
+          </li>
+          <li class="options center">
+            <!-- Botones retroceder, iniciar/pausar, avanzar video -->
+            <button class="backward-btn" onclick="backwardVideo()"><i class="fas fa-backward"></i></button>
+            <button class="play-btn" onclick="playVideo()"><i class="fas fa-play"></i></button>
+            <button class="forward-tbn" onclick="forwardVideo()"><i class="fas fa-forward"></i></button>
+          </li>
+          <div class="audio-controller">
+            <i id="volume-icon" class="fas fa-volume-down"></i>
+            <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="1">
+          </div>
+          <li class="options" id="opt-right">
+            <!-- Botones cambiar velocidad y pantalla completa-->
+            <div class="dropup">
+              <button class="btn speed-btn" data-bs-toggle="dropdown"><i class="fas fa-gauge"></i>
+              </button>
+              <ul class="dropdown-menu speed-options">
+                <li class="dropdown-item">2</li>
+                <li class="dropdown-item">1.75</li>
+                <li class="dropdown-item">1.5</li>
+                <li class="dropdown-item">1.25</li>
+                <li class="dropdown-item">1</li>
+                <li class="dropdown-item">0.75</li>
+                <li class="dropdown-item">0.5</li>
+                <li class="dropdown-item">0.25</li>
+              </ul>
+            </div>
+            <button class="fullscreen-btn" onclick="fullscreen()"><i class="fas fa-expand"></i></button>
+          </li>
+        </ul>
       </div>
     </div>
+    <script src="js/videoControls.js"></script>
   </section>
 
   <!-- AUTHORS SECTION -->
@@ -335,53 +267,55 @@
     <section class="choice_section layout_padding">
       <div class="map">
         <div class="title-card-slider">
-          <h2>Cines en Mallorca</h2>
+          <h2>Cines en Baleares</h2>
         </div>
-        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JL1IsE6FGWRi2CHKxWhYsuLyjTb090c&ehbc=2E312F&noprof=1" width="900" height="700"></iframe>
+        <div id="map"></div>
       </div>
     </section>
-
-    <section class="team_section">
+    <section class="team_section-inicio">
       <h2>Los <span>autores</span></h2>
       <div class="cards1">
         <div class="container container-hero-phone">
           <div class="card-slider-title-container related hero-fristone-tablet">
             <div class="lists-slider">
               <div class="row text-center" id="rowAutores">
-                <div class="col-md-3" id="contenedorAutor" style="background-color: #848484;">
-                  <a href="team.html#sasha" id="nombreAutor">SASHA CAMMARATTA</a>
+                <div class="col-md-3" id="contenedorAutor" style="background-color: black;">
+                  <a href="team.html#sasha" class="nombreAutor">SASHA CAMMARATA</a>
                   <p id="descAutor">Estudiante de 4º del grado en Ingeniería Informática en la UIB</p>
-                  <img src="images/creadores/sasha.jpg" alt="Sasha">
+                  <img src="images/creadores/sasha.webp" alt="Sasha">
                   <!-- ENLACES -->
                   <div class="ratings" style="margin-top: 15px;">
-                    <a class="authorsSocial linkedin" href="#" target="_blank"
-                      style="background-image: url('images/creadores/linkedin-white.png');" title="Linkedin"></a>
+                    <a class="authorsSocial linkedin"
+                      href="https://www.linkedin.com/in/sasha-cammarata-san-segundo-828545242/" target="_blank"
+                      style="background-image: url('images/creadores/linkedin-white.svg');" title="Linkedin"></a>
                     <a class="authorsSocial github" href="https://github.com/ThePugo" target="_blank"
-                      style="background-image: url('images/creadores/github-white.png');" title="GitHub"></a>
+                      style="background-image: url('images/creadores/github-white.svg');" title="GitHub"></a>
                   </div>
                 </div>
-                <div class="col-md-3" id="contenedorAutor" style="background-color: #848484;">
-                  <a href="team.html#mario" id="nombreAutor">MARIO VENTURA</a>
+                <div class="col-md-3" id="contenedorAutor" style="background-color: black;">
+                  <a href="team.html#mario" class="nombreAutor">MARIO VENTURA</a>
                   <p id="descAutor">Estudiante de 4º del grado en Ingeniería Informática en la UIB</p>
-                  <img src="images/creadores/mario.jpg" alt="Mario">
+                  <img src="images/creadores/mario.webp" alt="Mario">
                   <!-- ENLACES -->
                   <div class="ratings" style="margin-top: 15px;">
-                    <a class="authorsSocial linkedin" href="https://www.linkedin.com/in/mario-ventura-burgos-935229264/" target="_blank"
-                      style="background-image: url('images/creadores/linkedin-white.png');" title="Linkedin"></a>
+                    <a class="authorsSocial linkedin" href="https://www.linkedin.com/in/mario-ventura-burgos-935229264/"
+                      target="_blank" style="background-image: url('images/creadores/linkedin-white.svg');"
+                      title="Linkedin"></a>
                     <a class="authorsSocial github" href="https://github.com/venturamario" target="_blank"
-                      style="background-image: url('images/creadores/github-white.png');" title="GitHub"></a>
+                      style="background-image: url('images/creadores/github-white.svg');" title="GitHub"></a>
                   </div>
                 </div>
-                <div class="col-md-3" id="contenedorAutor" style="background-color: #848484;">
-                  <a href="team.html#enrique" id="nombreAutor">ENRIQUE SÁNCHEZ</a>
+                <div class="col-md-3" id="contenedorAutor" style="background-color: black;">
+                  <a href="team.html#enrique" class="nombreAutor">ENRIQUE SÁNCHEZ</a>
                   <p id="descAutor">Estudiante de 4º del grado en Ingeniería Informática en la UIB</p>
-                  <img src="images/creadores/enrique.jpg" alt="Enrique">
+                  <img src="images/creadores/enrique.webp" alt="Enrique">
                   <!-- ENLACES -->
                   <div class="ratings" style="margin-top: 15px;">
-                    <a class="authorsSocial linkedin" href="https://www.linkedin.com/in/jos%C3%A9-enrique-s%C3%A1nchez-weiss-69408a2b7/" target="_blank"
-                      style="background-image: url('images/creadores/linkedin-white.png');" title="Linkedin"></a>
+                    <a class="authorsSocial linkedin"
+                      href="https://www.linkedin.com/in/jos%C3%A9-enrique-s%C3%A1nchez-weiss-69408a2b7/" target="_blank"
+                      style="background-image: url('images/creadores/linkedin-white.svg');" title="Linkedin"></a>
                     <a class="authorsSocial github" href="https://github.com/Enrisan2705" target="_blank"
-                      style="background-image: url('images/creadores/github-white.png');" title="GitHub"></a>
+                      style="background-image: url('images/creadores/github-white.svg');" title="GitHub"></a>
                   </div>
                 </div>
 
@@ -392,10 +326,59 @@
       </div>
     </section>
   </div>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8Uq190AxTB1JvsUMVioRMYM2_W_UbBHo&callback=initMap">
+    </script>
+  <script>
+    async function initMap() {
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: { lat: 39.4696, lng: 3.1483 }
+      });
+
+      const seenCinemas = new Set(); // Almacenar los nombres de los cines que ya tienen marcadores
+
+      // Carga del archivo JSON con la geolocalización de los cines
+      fetch('cines_cartelera.json')
+        .then(response => response.json())
+        .then(data => {
+          data.subEvent.forEach(event => {
+            event.subEvent.forEach(screeningEvent => {
+              if (screeningEvent.location && screeningEvent.location.location) {
+                screeningEvent.location.location.forEach(location => {
+                  if (location.geo && !seenCinemas.has(screeningEvent.location.name)) {
+                    seenCinemas.add(screeningEvent.location.name); // Añadir el nombre del cine al conjunto
+                    var marker = new google.maps.Marker({
+                      position: new google.maps.LatLng(location.geo.latitude, location.geo.longitude),
+                      map: map,
+                      title: screeningEvent.location.name
+                    });
+                    const infoWindow = new google.maps.InfoWindow({
+                      content: `<div><strong style="color: black;">${screeningEvent.location.name}</strong><br><a href="${screeningEvent.location.sameAs}" target="_blank">Más detalles</a></div>`
+                    });
+
+                    marker.addListener('click', () => {
+                      infoWindow.open(map, marker);
+                    });
+                  }
+                });
+              }
+            });
+          });
+        })
+        .catch(error => console.error('Error al cargar los datos de los cines:', error));
+    }
+
+
+  </script>
 
   <!-- Footer section -->
-  <section>
-    <h2>footer inacabado</h2>
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By UIB
+      </p>
+    </div>
   </section>
 </body>
 

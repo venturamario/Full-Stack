@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Basic -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Site Metas -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="description"
+        content="Insularium, donde se ofrece la mejor experiencia de cine posible en las Islas Baleares">
+    <link rel="icon" type="image/x-icon" href="favicon/icon.ico">
+    <script type="module" src="js/custom.js"></script>
+    <script src="js/loadFilms.js"></script>
+    <script src="js/loadCartelera.js"></script>
+    <script type="application/ld+json" id="WebSemantica_cines"> </script>
+
+    <title>Insularium</title>
+    <!-- bootstrap core css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <!-- fonts style -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!--owl slider stylesheet -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <!-- font awesome style -->
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet" />
+    <!-- responsive style -->
+    <link href="css/responsive.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@3.0.1/dist/js/multi-select-tag.js"></script>
+    <script src="js/search.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z6KMC1ZYST"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z6KMC1ZYST');
+    </script>
+
+</head>
+
+<body>
+    <div class="hero_area">
+        <div class="hero_bg_box">
+            <div class="bg_img_box">
+                <img src="images/hero-bg.png" alt="background">
+            </div>
+        </div>
+        <!-- header -->
+        <header class="header_section">
+            <div class="container-fluid">
+                <nav class="navbar navbar-expand-lg custom_nav-container ">
+                    <a class="navbar-brand" href="index.html">
+                        <span>
+                            Insularium
+                        </span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class=""> </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Inicio</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="films.html">Peliculas<span
+                                        class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cines.html">Cines</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="team.html">Equipo</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contacto</a>
+                            </li>
+                        </ul>
+                        <br>
+                        <div class="search-bar-container">
+                            <input type="text" class="typeahead" data-provide="typeahead"
+                                placeholder="Introduce el título de la película">
+                            <button>
+                                <div class="lupa-img">
+                                    <img src="images/lupa.svg" alt="lupa">
+                                </div>
+                            </button>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- CATEGORIES SECTION -->
+
+        <section class="choice_section layout_padding">
+            <div class="cards1">
+                <div class="container container-hero-phone">
+                    <div class="card-slider-title-container related hero-fristone-tablet">
+                        <h1>CARTELERA<br><br></h1>
+                        <!-- FILTROS -->
+                        <h4><strong> INTRODUCE LOS FILTROS QUE DESEES:</strong></h4>
+                        <br>
+                        <div class="filtro-container">
+                            <button onclick=orderAsc() class="buttonOrder">
+                                Orden Ascendente
+                            </button>
+                            <select id="categoria" multiple>
+                                <option value="Comedia">Comedia</option>
+                                <option value="Ciencia-Ficcion">Ciencia Ficción</option>
+                                <option value="Terror">Terror</option>
+                                <option value="Thriller">Thriller</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Accion">Acción</option>
+                                <option value="Aventuras">Aventuras</option>
+                                <option value="Romance">Romance</option>
+                                <option value="Animación">Animación</option>
+                                <option value="Musical">Musical</option>
+                                <option value="Documental">Documental</option>
+                            </select>
+                            <button onclick=orderDesc() class="buttonOrder">
+                                Orden Descendente
+                            </button>
+                        </div>
+                        <br><br>
+                        <div class="cards1">
+                            <div class="title-card-slider">
+                                <h2 id="Comedia">Comedia</h2>
+                            </div>
+                            <div id="Comedia">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Ciencia-Ficcion">Ciencia Ficción</h2>
+                            </div>
+                            <div id="Ciencia-Ficcion">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Terror">Terror</h2>
+                            </div>
+                            <div id="Terror">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Thriller">Thriller</h2>
+                            </div>
+                            <div id="Thriller">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Drama">Drama</h2>
+                            </div>
+                            <div id="Drama">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Accion">Acción</h2>
+                            </div>
+                            <div id="Accion">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Aventuras">Aventuras</h2>
+                            </div>
+                            <div id="Aventuras">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Romance">Romance</h2>
+                            </div>
+                            <div id="Romance">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Animación">Animación</h2>
+                            </div>
+                            <div id="Animación">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Musical">Musical</h2>
+                            </div>
+                            <div id="Musical">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards1">
+                    <div class="container container-hero-phone">
+                        <div class="card-slider-title-container related hero-fristone-tablet">
+                            <div class="title-card-slider">
+                                <h2 id="Documental">Documental</h2>
+                            </div>
+                            <div id="Documental">
+                                <div class="films-slider">
+                                    <div class="row text-center">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer section -->
+    <section class="footer_section">
+        <div class="container">
+            <p>
+                &copy; <span id="displayYear"></span> All Rights Reserved By UIB
+            </p>
+        </div>
+    </section>
+</body>
+</body>
+
+</html>
